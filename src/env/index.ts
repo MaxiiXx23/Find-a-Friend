@@ -10,6 +10,7 @@ const envSchema = z.object({
   JWT_SECRET_KEY: z.string(),
   EXPIRES_IN_TOKEN: z.string(),
   EXPIRES_IN_REFRESH_TOKEN: z.string(),
+  URL_WEB: z.string(),
 })
 
 const _env = envSchema.safeParse(process.env)
