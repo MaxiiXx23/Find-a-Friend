@@ -1,0 +1,7 @@
+node_modules
+build
+.env
+coverage
+
+# Directory of files as exemple: images
+temp
