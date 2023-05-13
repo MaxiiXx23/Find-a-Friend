@@ -2,10 +2,10 @@ import { Levels, Pet, StagesAge } from '@prisma/client'
 
 interface IFilterQueriesProps {
   petsOrg: Pet[]
-  age: StagesAge | null
-  levelEnergy: number | null
-  size: Levels | null
-  independence: Levels | null
+  age: StagesAge | undefined
+  levelEnergy: number | undefined
+  size: Levels | undefined
+  independence: Levels | undefined
 }
 
 export function filterQueries({

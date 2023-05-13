@@ -8,7 +8,7 @@ import { verifyToken } from '../middlewares/verifyToken'
 const appRoutes = Router()
 
 appRoutes.use('/organization', organizationRoutes)
-appRoutes.use('/pet', verifyToken, petRoutes)
+appRoutes.use('/pet', petRoutes)
 appRoutes.use('/requirement', requirementRoutes)
 appRoutes.use('/photo/pet', verifyToken, photoRoutes)
 
