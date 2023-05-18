@@ -35,6 +35,20 @@ export class PrismaPetRepository implements IPetRepository {
       where: {
         id,
       },
+      include: {
+        requirement: {
+          select: {
+            id: true,
+            description: true,
+          },
+        },
+        photoPet: {
+          select: {
+            id: true,
+            path: true,
+          },
+        },
+      },
     })
 
     if (!pet) {
