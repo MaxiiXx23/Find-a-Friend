@@ -21,4 +21,20 @@ export class InMemoryRequirementRepository implements IRequirementRepository {
 
     return requirement
   }
+
+  async delete(id: string): Promise<Requirement | null> {
+    const requirement = this.items.find((item) => item.id === id)
+
+    if (!requirement) {
+      return null
+    }
+
+    const listWithRequirementRemoved = this.items.filter(
+      (item) => item.id !== requirement.id,
+    )
+
+    this.items = [...listWithRequirementRemoved]
+
+    return requirement
+  }
 }

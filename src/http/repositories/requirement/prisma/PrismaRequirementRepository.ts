@@ -16,4 +16,14 @@ export class PrismaRequirementRepository implements IRequirementRepository {
 
     return requirement
   }
+
+  async delete(id: string): Promise<Requirement | null> {
+    const requirement = await prisma.requirement.delete({
+      where: {
+        id,
+      },
+    })
+
+    return requirement
+  }
 }
