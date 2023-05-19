@@ -48,6 +48,11 @@ export class PrismaPetRepository implements IPetRepository {
             path: true,
           },
         },
+        org: {
+          select: {
+            phone: true,
+          },
+        },
       },
     })
 
