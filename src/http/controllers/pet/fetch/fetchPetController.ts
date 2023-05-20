@@ -10,6 +10,10 @@ export async function fetchPetController(
   response: Response,
   next: NextFunction,
 ) {
+  const fetchPetSchemaQuery = z.object({
+    page: z.coerce.number().min(1).default(1),
+  })
+
   const fetchPetSchemaBody = z.object({
     city: z.string(),
     state: z.string(),
@@ -23,6 +27,8 @@ export async function fetchPetController(
   })
 
   try {
+    const { page } = fetchPetSchemaQuery.parse(request.query)
+
     const { city, state, age, levelEnergy, size, independence } =
       fetchPetSchemaBody.parse(request.body)
 
@@ -35,6 +41,7 @@ export async function fetchPetController(
       levelEnergy,
       size,
       independence,
+      page,
     })
 
     return response.status(200).json({ pets })

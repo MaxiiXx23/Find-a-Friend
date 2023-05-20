@@ -6,6 +6,7 @@ export interface IFetchByQueriesProps {
   levelEnergy: number | undefined
   size: Levels | undefined
   independence: Levels | undefined
+  page: number
 }
 
 export interface IPetRepository {

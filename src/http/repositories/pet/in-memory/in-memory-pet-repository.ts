@@ -56,6 +56,7 @@ export class InMemoryPetRepository implements IPetRepository {
     independence,
     levelEnergy,
     size,
+    page,
   }: IFetchByQueriesProps): Promise<Pet[]> {
     const petsOrg = this.items.filter((pet) => pet.org_id === idOrg)
 
@@ -67,6 +68,8 @@ export class InMemoryPetRepository implements IPetRepository {
       size,
     })
 
-    return pets!
+    const petsPaginated = [...pets!.slice((page - 1) * 20, page * 20)]
+
+    return petsPaginated
   }
 }

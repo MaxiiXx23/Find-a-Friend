@@ -46,6 +46,6 @@
 
 - [x] A senha precisa ser criptografada;
 - [x] Os dados da aplicação precisam estar persistidos(salvos) em BD PostgreSQL;
-- [] Todas as listas de dados precisar estar paginadas com 20 itens por página;
+- [x] Todas as listas de dados precisar estar paginadas com 20 itens por página;
 - [x] O usuário deve ser identificado por um JWT(JSON Web Token);
 - [x] O upload das imagens deve ser feita com Multer;

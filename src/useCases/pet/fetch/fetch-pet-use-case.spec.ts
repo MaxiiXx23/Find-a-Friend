@@ -11,6 +11,8 @@ import { FetchPetUseCase } from './FetchPetUseCase'
 
 import { PetsNotFoundByStateError } from './errors/Pets-not-found-by-state-error'
 
+import { GeneratePets } from '@/utils/tests/GeneratePets'
+
 let petsRepository: InMemoryPetRepository
 let addressRepository: InMemoryAddressRepository
 let organizationRepository: InMemoryOrganizationRepository
@@ -18,6 +20,8 @@ let organizationRepository: InMemoryOrganizationRepository
 let registerUseCase: RegisterUseCase
 
 let sut: FetchPetUseCase
+
+let generatePets: GeneratePets
 
 // queries
 
@@ -34,6 +38,11 @@ describe('Fetch Pet Use Case test unit', () => {
     )
 
     sut = new FetchPetUseCase(petsRepository, addressRepository)
+    generatePets = new GeneratePets(
+      petsRepository,
+      addressRepository,
+      organizationRepository,
+    )
   })
 
   it('Should to be able Fetch Pets by queries', async () => {
@@ -105,6 +114,7 @@ describe('Fetch Pet Use Case test unit', () => {
       independence: undefined,
       levelEnergy: undefined,
       size: undefined,
+      page: 1,
     })
 
     expect(pets).toHaveLength(2)
@@ -180,6 +190,7 @@ describe('Fetch Pet Use Case test unit', () => {
         independence: undefined,
         levelEnergy: undefined,
         size: undefined,
+        page: 1,
       })
     }).rejects.toBeInstanceOf(PetsNotFoundByStateError)
   })
@@ -253,6 +264,7 @@ describe('Fetch Pet Use Case test unit', () => {
       independence: undefined,
       levelEnergy: undefined,
       size: undefined,
+      page: 1,
     })
 
     expect(pets).toHaveLength(2)
@@ -327,6 +339,7 @@ describe('Fetch Pet Use Case test unit', () => {
       independence: undefined,
       levelEnergy: undefined,
       size: undefined,
+      page: 1,
     })
 
     expect(pets).toHaveLength(1)
@@ -401,6 +414,7 @@ describe('Fetch Pet Use Case test unit', () => {
       age: undefined,
       independence: undefined,
       size: undefined,
+      page: 1,
     })
 
     expect(pets).toHaveLength(2)
@@ -475,6 +489,7 @@ describe('Fetch Pet Use Case test unit', () => {
       age: undefined,
       independence: undefined,
       levelEnergy: undefined,
+      page: 1,
     })
 
     expect(pets).toHaveLength(2)
@@ -535,6 +550,7 @@ describe('Fetch Pet Use Case test unit', () => {
       age: undefined,
       levelEnergy: undefined,
       size: undefined,
+      page: 1,
     })
 
     expect(pets).toHaveLength(1)
@@ -610,8 +626,26 @@ describe('Fetch Pet Use Case test unit', () => {
       size: 'SMALL',
       levelEnergy: 5,
       independence: 'SMALL',
+      page: 1,
     })
 
     expect(pets).toHaveLength(1)
+  })
+
+  it('Should to be able Fetch Pets by with pagination of 20 items', async () => {
+    await generatePets.generateEqualsPets()
+
+    const { pets } = await sut.execute({
+      city: 'Campinas',
+      state: 'sp',
+
+      age: 'SENIOR',
+      size: 'SMALL',
+      levelEnergy: 5,
+      independence: 'SMALL',
+      page: 1,
+    })
+
+    expect(pets).toHaveLength(20)
   })
 })

@@ -12,6 +12,7 @@ interface IRequest {
   levelEnergy: number | undefined
   size: Levels | undefined
   independence: Levels | undefined
+  page: number
 }
 
 interface IResponse {
@@ -31,6 +32,7 @@ export class FetchPetUseCase {
     levelEnergy,
     size,
     independence,
+    page,
   }: IRequest): Promise<IResponse> {
     let pets: Pet[] = []
 
@@ -55,6 +57,7 @@ export class FetchPetUseCase {
           levelEnergy,
           size,
           independence,
+          page,
         })
 
         if (pet) {

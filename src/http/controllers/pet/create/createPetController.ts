@@ -9,6 +9,8 @@ export async function createPetController(
   response: Response,
   next: NextFunction,
 ) {
+  const { id } = request.user
+
   const createPetSchemaBody = z.object({
     name: z.string().max(80, 'Name must have on the maximus 80 caracteres'),
     description: z
@@ -21,7 +23,6 @@ export async function createPetController(
     ambient: z
       .string()
       .max(40, 'Ambient must have on the maximus 40 caracteres'),
-    org_id: z.string().uuid('org_id must to be a uuid'),
   })
 
   try {
@@ -33,7 +34,6 @@ export async function createPetController(
       independence,
       age,
       ambient,
-      org_id,
     } = createPetSchemaBody.parse(request.body)
 
     const createPetUseCase = makeCreatePetUseCase()
@@ -46,7 +46,7 @@ export async function createPetController(
       independence,
       age,
       ambient,
-      org_id,
+      org_id: id,
     })
 
     return response.status(201).json({ pet })

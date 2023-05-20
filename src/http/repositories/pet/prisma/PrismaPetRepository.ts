@@ -77,12 +77,18 @@ export class PrismaPetRepository implements IPetRepository {
     independence,
     levelEnergy,
     size,
+    page,
   }: IFetchByQueriesProps): Promise<Pet[]> {
+    const take = 20
+    const skip = (page - 1) * 20
+
     const pets = await prisma.pet.findMany({
       where: {
-        org_id: idOrg,
         OR: [
           {
+            org_id: {
+              equals: idOrg,
+            },
             age: {
               equals: age,
             },
@@ -98,6 +104,8 @@ export class PrismaPetRepository implements IPetRepository {
           },
         ],
       },
+      take,
+      skip,
     })
 
     return pets
