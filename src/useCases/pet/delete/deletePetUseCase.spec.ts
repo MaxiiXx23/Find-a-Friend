@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { Levels } from '@prisma/client'
 
-import { InMemoryPetRepository } from '@/http/repositories/pet/in-memory/in-memory-pet-repository'
+import { InMemoryPetRepository } from '@/shared/http/repositories/pet/in-memory/in-memory-pet-repository'
 import { DeletePetUseCase } from './DeletePetUseCase'
 
 import { ResourceNotFoundError } from '@/useCases/errors/ResourceNotFoundError'

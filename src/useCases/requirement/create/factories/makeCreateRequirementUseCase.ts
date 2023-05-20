@@ -1,6 +1,6 @@
-import { PrismaRequirementRepository } from '@/http/repositories/requirement/prisma/PrismaRequirementRepository'
+import { PrismaRequirementRepository } from '@/shared/http/repositories/requirement/prisma/PrismaRequirementRepository'
 import { CreateRequirementUseCase } from '../CreateRequirementUseCase'
-import { PrismaPetRepository } from '@/http/repositories/pet/prisma/PrismaPetRepository'
+import { PrismaPetRepository } from '@/shared/http/repositories/pet/prisma/PrismaPetRepository'
 
 export function makeCreateRequirementUseCase(): CreateRequirementUseCase {
   const requirementRepository = new PrismaRequirementRepository()

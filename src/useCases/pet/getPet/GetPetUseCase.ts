@@ -1,4 +1,4 @@
-import { IPetRepository } from '@/http/repositories/pet/IPetRepository'
+import { IPetRepository } from '@/shared/http/repositories/pet/IPetRepository'
 import { PetNotFoundError } from '@/useCases/requirement/create/errors/PetNotFoundError'
 import { Pet } from '@prisma/client'
 

@@ -1,4 +1,4 @@
-import { PrismaOrganizationRepository } from '@/http/repositories/organization/prisma/PrismaOrganizationRepository'
+import { PrismaOrganizationRepository } from '@/shared/http/repositories/organization/prisma/PrismaOrganizationRepository'
 import { AuthenticateUseCase } from '../AuthenticateUseCase'
 
 export function makeAuthenticateUseCase() {

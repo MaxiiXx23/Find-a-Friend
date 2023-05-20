@@ -1,7 +1,7 @@
 import { Requirement } from '@prisma/client'
 
-import { IRequirementRepository } from '@/http/repositories/requirement/IRequirementRepository'
-import { IPetRepository } from '@/http/repositories/pet/IPetRepository'
+import { IRequirementRepository } from '@/shared/http/repositories/requirement/IRequirementRepository'
+import { IPetRepository } from '@/shared/http/repositories/pet/IPetRepository'
 import { PetNotFoundError } from './errors/PetNotFoundError'
 
 interface IRequest {

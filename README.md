@@ -19,6 +19,30 @@
 * tsup
 * Vitest
 
+### Ferramentas de desenvolvimento utilizadas:
+
+* Visual Studio Code
+* Insomnia
+* Beekeeper Studio
+* Docker Desktop
+
+## Rotas
+
+### Base Url(dev): http://localhost:3000
+
+#### ***organizations***
+* create(POST) -->    /
+* authentication(POST) -->    /session
+#### ***pets***
+* create(POST) -->    /
+* getPet(GET) -->    /profile-pet
+* fetchPets(POST) -->    /fetch
+* delete(DELETE) -->    /delete
+#### ***requirements***
+* create(POST) -->    /
+#### ***photos***
+* create/upload(POST) -->    /
+
 ## RFs (Requisitos funcionais)
 
 - [x] Deve ser possível cadastrar um pet;

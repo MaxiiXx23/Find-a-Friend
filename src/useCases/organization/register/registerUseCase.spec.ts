@@ -1,10 +1,10 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 
-import { InMemoryOrganizationRepository } from '@/http/repositories/organization/in-memory/in-memory-organization-repository'
+import { InMemoryOrganizationRepository } from '@/shared/http/repositories/organization/in-memory/in-memory-organization-repository'
 import { RegisterUseCase } from './RegisterUseCase'
 
 import { OrganizationAlreadyExistsError } from './errors/organization-already-exists-error'
-import { InMemoryAddressRepository } from '@/http/repositories/address/in-memory/in-memory-address-repository'
+import { InMemoryAddressRepository } from '@/shared/http/repositories/address/in-memory/in-memory-address-repository'
 
 let inMemoryOrganizationRepository: InMemoryOrganizationRepository
 let inMemoryAddressRepository: InMemoryAddressRepository

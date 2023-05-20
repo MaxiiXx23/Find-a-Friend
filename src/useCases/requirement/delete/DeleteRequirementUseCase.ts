@@ -1,6 +1,6 @@
 import { Requirement } from '@prisma/client'
 
-import { IRequirementRepository } from '@/http/repositories/requirement/IRequirementRepository'
+import { IRequirementRepository } from '@/shared/http/repositories/requirement/IRequirementRepository'
 import { RequirementNotFoundError } from './errors/Requirement-not-found-error'
 
 interface IRequest {

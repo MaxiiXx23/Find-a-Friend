@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 
-import { InMemoryRequirementRepository } from '@/http/repositories/requirement/in-memory/in-memory-requirement-repository'
+import { InMemoryRequirementRepository } from '@/shared/http/repositories/requirement/in-memory/in-memory-requirement-repository'
 import { DeleteRequirementUseCase } from './DeleteRequirementUseCase'
 
 import { RequirementNotFoundError } from './errors/Requirement-not-found-error'

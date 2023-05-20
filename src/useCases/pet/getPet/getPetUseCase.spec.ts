@@ -6,9 +6,9 @@ import { GetPetUseCase } from './GetPetUseCase'
 import { CreatePetUseCase } from '../create/CreatePetUseCase'
 import { RegisterUseCase } from '@/useCases/organization/register/RegisterUseCase'
 
-import { InMemoryPetRepository } from '@/http/repositories/pet/in-memory/in-memory-pet-repository'
-import { InMemoryOrganizationRepository } from '@/http/repositories/organization/in-memory/in-memory-organization-repository'
-import { InMemoryAddressRepository } from '@/http/repositories/address/in-memory/in-memory-address-repository'
+import { InMemoryPetRepository } from '@/shared/http/repositories/pet/in-memory/in-memory-pet-repository'
+import { InMemoryOrganizationRepository } from '@/shared/http/repositories/organization/in-memory/in-memory-organization-repository'
+import { InMemoryAddressRepository } from '@/shared/http/repositories/address/in-memory/in-memory-address-repository'
 
 import { PetNotFoundError } from '@/useCases/requirement/create/errors/PetNotFoundError'
 

@@ -1,6 +1,6 @@
-import { PrismaOrganizationRepository } from '@/http/repositories/organization/prisma/PrismaOrganizationRepository'
+import { PrismaOrganizationRepository } from '@/shared/http/repositories/organization/prisma/PrismaOrganizationRepository'
 import { RegisterUseCase } from '../RegisterUseCase'
-import { PrismaAddressRepository } from '@/http/repositories/address/prisma/PrismaAddressRepository'
+import { PrismaAddressRepository } from '@/shared/http/repositories/address/prisma/PrismaAddressRepository'
 
 export function makeRegisterUseCase() {
   const organizationRespository = new PrismaOrganizationRepository()

@@ -1,7 +1,7 @@
 import { Levels, Pet, StagesAge } from '@prisma/client'
 
-import { IPetRepository } from '@/http/repositories/pet/IPetRepository'
-import { IAddressRepository } from '@/http/repositories/address/IAddressRepository'
+import { IPetRepository } from '@/shared/http/repositories/pet/IPetRepository'
+import { IAddressRepository } from '@/shared/http/repositories/address/IAddressRepository'
 
 import { PetsNotFoundByStateError } from './errors/Pets-not-found-by-state-error'
 

@@ -5,8 +5,8 @@ import fs from 'fs'
 import { Levels, StagesAge } from '@prisma/client'
 import { upload } from '@/config/upload'
 
-import { InMemoryPhotosRepository } from '@/http/repositories/photo/in-memory/in-memory-photos-repository'
-import { InMemoryPetRepository } from '@/http/repositories/pet/in-memory/in-memory-pet-repository'
+import { InMemoryPhotosRepository } from '@/shared/http/repositories/photo/in-memory/in-memory-photos-repository'
+import { InMemoryPetRepository } from '@/shared/http/repositories/pet/in-memory/in-memory-pet-repository'
 
 import { UploadPhotosUseCase } from './UploadPhotosUseCase'
 

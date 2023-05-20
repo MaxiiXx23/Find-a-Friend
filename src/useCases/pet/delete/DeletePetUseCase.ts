@@ -1,4 +1,4 @@
-import { IPetRepository } from '@/http/repositories/pet/IPetRepository'
+import { IPetRepository } from '@/shared/http/repositories/pet/IPetRepository'
 import { ResourceNotFoundError } from '@/useCases/errors/ResourceNotFoundError'
 
 interface IRequest {

@@ -1,6 +1,6 @@
-import { PrismaOrganizationRepository } from '@/http/repositories/organization/prisma/PrismaOrganizationRepository'
+import { PrismaOrganizationRepository } from '@/shared/http/repositories/organization/prisma/PrismaOrganizationRepository'
 import { CreatePetUseCase } from '../CreatePetUseCase'
-import { PrismaPetRepository } from '@/http/repositories/pet/prisma/PrismaPetRepository'
+import { PrismaPetRepository } from '@/shared/http/repositories/pet/prisma/PrismaPetRepository'
 
 export function makeCreatePetUseCase() {
   const organizationRepository = new PrismaOrganizationRepository()

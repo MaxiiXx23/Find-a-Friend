@@ -3,8 +3,8 @@ import { hash } from 'bcryptjs'
 
 import { Levels, StagesAge } from '@prisma/client'
 
-import { InMemoryOrganizationRepository } from '@/http/repositories/organization/in-memory/in-memory-organization-repository'
-import { InMemoryPetRepository } from '@/http/repositories/pet/in-memory/in-memory-pet-repository'
+import { InMemoryOrganizationRepository } from '@/shared/http/repositories/organization/in-memory/in-memory-organization-repository'
+import { InMemoryPetRepository } from '@/shared/http/repositories/pet/in-memory/in-memory-pet-repository'
 import { CreatePetUseCase } from './CreatePetUseCase'
 
 import { OrganizationNotFoundError } from './errors/organization-not-found-error'

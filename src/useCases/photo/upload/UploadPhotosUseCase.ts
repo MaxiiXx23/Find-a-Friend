@@ -2,8 +2,8 @@ import { Express } from 'express'
 
 import { PhotoPet } from '@prisma/client'
 
-import { IPetRepository } from '@/http/repositories/pet/IPetRepository'
-import { IPhotosRepository } from '@/http/repositories/photo/IPhotosRepository'
+import { IPetRepository } from '@/shared/http/repositories/pet/IPetRepository'
+import { IPhotosRepository } from '@/shared/http/repositories/photo/IPhotosRepository'
 
 import { ResourceNotFoundError } from '@/useCases/errors/ResourceNotFoundError'
 import { PathsNotSendedError } from '../errors/Paths-not-sended-error'

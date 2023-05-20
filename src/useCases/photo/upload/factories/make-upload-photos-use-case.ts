@@ -1,6 +1,6 @@
-import { PrismaPhotosRepository } from '@/http/repositories/photo/prisma/PrismaPhotosRepository'
+import { PrismaPhotosRepository } from '@/shared/http/repositories/photo/prisma/PrismaPhotosRepository'
 import { UploadPhotosUseCase } from '../UploadPhotosUseCase'
-import { PrismaPetRepository } from '@/http/repositories/pet/prisma/PrismaPetRepository'
+import { PrismaPetRepository } from '@/shared/http/repositories/pet/prisma/PrismaPetRepository'
 import { LocalStorageProvider } from '@/shared/container/providers/storageProvider/implementations/LocalStorageProvider'
 
 export function makeUploadPhotosUseCase(): UploadPhotosUseCase {

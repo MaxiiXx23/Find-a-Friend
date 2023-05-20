@@ -1,9 +1,9 @@
 import { Organization } from '@prisma/client'
 import { hash } from 'bcryptjs'
 
-import { IOrganizationRepository } from '@/http/repositories/organization/IOrganizationRepository'
+import { IOrganizationRepository } from '@/shared/http/repositories/organization/IOrganizationRepository'
 import { OrganizationAlreadyExistsError } from './errors/organization-already-exists-error'
-import { IAddressRepository } from '@/http/repositories/address/IAddressRepository'
+import { IAddressRepository } from '@/shared/http/repositories/address/IAddressRepository'
 
 interface IRequest {
   name_responsible: string

@@ -1,4 +1,4 @@
-import { PrismaPetRepository } from '@/http/repositories/pet/prisma/PrismaPetRepository'
+import { PrismaPetRepository } from '@/shared/http/repositories/pet/prisma/PrismaPetRepository'
 import { DeletePetUseCase } from '../DeletePetUseCase'
 
 export function makeDeletePetUseCase(): DeletePetUseCase {

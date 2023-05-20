@@ -1,7 +1,7 @@
 import { Pet, Levels, StagesAge } from '@prisma/client'
 
-import { IOrganizationRepository } from '@/http/repositories/organization/IOrganizationRepository'
-import { IPetRepository } from '@/http/repositories/pet/IPetRepository'
+import { IOrganizationRepository } from '@/shared/http/repositories/organization/IOrganizationRepository'
+import { IPetRepository } from '@/shared/http/repositories/pet/IPetRepository'
 
 import { OrganizationNotFoundError } from './errors/organization-not-found-error'
 

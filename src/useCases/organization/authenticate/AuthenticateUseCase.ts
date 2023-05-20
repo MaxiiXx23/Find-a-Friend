@@ -1,7 +1,7 @@
 import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
 
-import { IOrganizationRepository } from '@/http/repositories/organization/IOrganizationRepository'
+import { IOrganizationRepository } from '@/shared/http/repositories/organization/IOrganizationRepository'
 import { auth } from '@/config/auth'
 
 import { InvalidCredentialsError } from './errors/InvalidCredentialsError'

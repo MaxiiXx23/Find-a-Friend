@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { Levels } from '@prisma/client'
 
-import { InMemoryRequirementRepository } from '@/http/repositories/requirement/in-memory/in-memory-requirement-repository'
+import { InMemoryRequirementRepository } from '@/shared/http/repositories/requirement/in-memory/in-memory-requirement-repository'
 import { CreateRequirementUseCase } from './CreateRequirementUseCase'
-import { InMemoryPetRepository } from '@/http/repositories/pet/in-memory/in-memory-pet-repository'
+import { InMemoryPetRepository } from '@/shared/http/repositories/pet/in-memory/in-memory-pet-repository'
 import { PetNotFoundError } from './errors/PetNotFoundError'
 
 let requirementRepository: InMemoryRequirementRepository
